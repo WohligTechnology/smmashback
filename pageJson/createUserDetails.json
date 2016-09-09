@@ -1,0 +1,201 @@
+{
+    "title": "Create User Details",
+    "jsonPage": "viewUserDetails",
+    "desciption": "",
+    "pageType": "create",
+    "fields": [{
+        "name": "Name",
+        "type": "text",
+        "tableRef": "name",
+        "id": "input1",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    }, {
+        "name": "Age",
+        "type": "text",
+        "tableRef": "age",
+        "id": "input2",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    }, {
+        "name": "Email",
+        "type": "text",
+        "tableRef": "email",
+        "id": "input3",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    }, {
+        "name": "Mobile Number",
+        "type": "text",
+        "tableRef": "mobileNumber",
+        "id": "input4",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    }, {
+        "name": "Gender",
+        "type": "select",
+        "tableRef": "gender",
+        "placeholder": "Select Gender",
+        "id": "input5",
+        "validation": ["required", "trim", "unique"],
+        "url": [{
+            "value": "Male",
+            "name": "Male"
+        }, {
+            "value": "Female",
+            "name": "Female"
+        }, {
+            "value": "Other",
+            "name": "Other"
+        }]
+    }, {
+        "name": "Address",
+        "type": "textarea",
+        "tableRef": "address",
+        "id": "input6",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    }, {
+        "name": "Colllege Name",
+        "type": "text",
+        "tableRef": "collegeName",
+        "id": "input7",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    }, {
+        "name": "Facebook ID/Profile Link",
+        "type": "text",
+        "tableRef": "fbIDLink",
+        "id": "input8",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    }, {
+        "name": "How many friends do you have on Facebook:",
+        "type": "select",
+        "tableRef": "friendsOnFb",
+        "placeholder": "Select Range",
+        "id": "input9",
+        "validation": ["required", "trim", "unique"],
+        "url": [{
+            "value": "Less than 500",
+            "name": "Less than 500"
+        }, {
+            "value": "500-1000",
+            "name": "500-1000"
+        }, {
+            "value": "1000-2000",
+            "name": "1000-2000"
+        }]
+    }, {
+        "name": "Twitter Handle",
+        "type": "text",
+        "tableRef": "twitterHandle",
+        "id": "input10",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+        }, {
+            "name": "Number of Twitter Followers",
+            "type": "select",
+            "tableRef": "twitterFollowers",
+            "placeholder": "Select Range",
+            "id": "input11",
+            "validation": ["required", "trim", "unique"],
+            "url": [{
+                "value": "Less than 100",
+                "name": "Less than 100"
+            }, {
+                "value": "100-500",
+                "name": "100-500"
+            }, {
+                "value": "500 & above",
+                "name": "500 & above"
+            }]
+        }, {
+            "name": "Instagram Handle",
+            "type": "text",
+            "tableRef": "instagramHandle",
+            "id": "input12",
+            "validation": ["required", "trim", "unique"],
+            "url": ""
+        }, {
+            "name": "Number of Instagram Followers",
+            "type": "select",
+            "tableRef": "instagramFollowers",
+            "placeholder": "Select Range",
+            "id": "input13",
+            "validation": ["required", "trim", "unique"],
+            "url": [{
+                "value": "Less than 800",
+                "name": "Less than 800"
+            }, {
+                "value": "800-3000",
+                "name": "800-3000"
+            }, {
+                "value": "3000 & above",
+                "name": "3000 & above"
+            }]
+        }, {
+            "name": "Snapchat Id",
+            "type": "text",
+            "tableRef": "snapchatId",
+            "id": "input12",
+            "validation": ["required", "trim", "unique"],
+            "url": ""
+        }, {
+            "name": "Number of Snapchat Followers",
+            "type": "select",
+            "tableRef": "snapchatFollowers",
+            "placeholder": "Select Range",
+            "id": "input13",
+            "validation": ["required", "trim", "unique"],
+            "url": [{
+                "value": "Less than 200",
+                "name": "Less than 200"
+            }, {
+                "value": "200-500",
+                "name": "200-500"
+            }, {
+                "value": "500 & above",
+                "name": "500 & above"
+            }]
+    }, {
+        "name": "Your Interests",
+        "type": "textarea",
+        "tableRef": "yourInterests",
+        "id": "input14",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    }, {
+        "name": "Achievements",
+        "type": "textarea",
+        "tableRef": "achievements",
+        "id": "input15",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    }, {
+        "name": "Are you a part of any college club/society?",
+        "type": "textarea",
+        "tableRef": "partOf",
+        "id": "input16",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    }, {
+        "name": "Describe yourself in 140 characters",
+        "type": "textarea",
+        "tableRef": "describeYourself",
+        "id": "input17",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    }],
+    "action": [{
+        "name": "submit",
+        "action": "submitUserDetails"
+    }, {
+        "name": "cancel",
+        "stateName": "page({jsonName:'viewUserDetails'})"
+    }],
+
+    "apiCall": {
+        "url": "UserDetails/save"
+    }
+}

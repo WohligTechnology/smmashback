@@ -1,0 +1,77 @@
+{
+    "title": "User Details",
+    "desciption": "",
+    "pageType": "view",
+    "fields": [ {
+          "name": "Name",
+          "isSort": "",
+          "tableRef": "name"
+        },
+        {
+          "name": "Age",
+          "isSort": "",
+          "tableRef": "age"
+        },
+        {
+          "name": "Email",
+          "isSort": "",
+          "tableRef": "email"
+        },
+        {
+          "name": "Mobile Number",
+          "isSort": "",
+          "tableRef": "mobileNumber"
+        },
+        {
+          "name": "Gender",
+          "isSort": "",
+          "tableRef": "gender"
+        }
+    ],
+    "action": [{
+        "name": "edit",
+        "icon": "mode_edit",
+        "color": "blue",
+        "action": "redirect",
+        "jsonPage": "editUserDetails",
+        "fieldsToSend": ["_id"],
+        "callFindOne": "UserDetails/findOne"
+    }, {
+        "name": "delete",
+        "icon": "delete",
+        "color": "red",
+        "action": "apiCallConfirm",
+        "title": "Delete ",
+        "content": "Are you sure you want to delete tag?",
+        "api": "UserDetails/delete",
+        "fieldsToSend": [{
+            "name": "_id",
+            "value": "_id"
+        }]
+    }],
+    "button": [{
+        "name": "excelexport",
+        "icon": "print",
+        "color": "blue",
+        "action": "excelexport"
+    }, {
+        "name": "uploadcsv",
+        "icon": "delete",
+        "color": "red",
+        "action": "uploadcsv"
+    }],
+    "filter": [{
+        "name": "category",
+        "url": "http://chaitalee.com/expertuser/getAll"
+    }, {
+        "name": "uploadcsv",
+        "icon": "delete",
+        "color": "red",
+        "action": "uploadcsv"
+    }],
+    "apiCall": {
+        "url": "UserDetails/search",
+        "params": "_id"
+    },
+    "createButtonState": "page({jsonName:'createUserDetails'})"
+}
